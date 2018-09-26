@@ -43,9 +43,8 @@ for id=1:d
                 ind3 = image(x1,y2,id);
                 ind4 = image(x2,y2,id);
 
-                tr = (ind3*y)+(ind1*(1-y));
-                br = (ind4*y)+(ind2*(1-y));
-                res(i,j,id) = (br*x)+(tr*(1-x));
+                val = ind3*y*(1-x)+ind1*(1-y)*(1-x)+ind4*y*x+ind2*(1-y)*x;
+                res(i,j,id) = val; 
             
             end
     end
