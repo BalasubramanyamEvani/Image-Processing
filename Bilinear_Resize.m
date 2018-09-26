@@ -17,8 +17,8 @@ res = zeros(new_rows, new_cols,d);
 
 for id=1:d
     for i = 1 : new_rows
-            x1 = cast(floor(i/zx),'uint32');
-            x2 = cast(ceil(i/zx),'uint32');
+            x1 = double(floor(i/zx));
+            x2 = double(ceil(i/zx));
             if x1 < 1
                 x1 = 1;
             end
@@ -28,8 +28,8 @@ for id=1:d
             x = rem(i/zx,1);
 
             for j = 1 : new_cols
-                y1 = cast(floor(j/zy),'uint32');
-                y2 = cast(ceil(j/zy),'uint32');
+                y1 = double(floor(j/zy));
+                y2 = double(ceil(j/zy));
                 if y1 < 1
                     y1 = 1;
                 end
