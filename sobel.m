@@ -3,6 +3,9 @@
 
 %% sobel takes in two parameters image file and flag, flag represents whether to apply gaussian blur or not, with
 % a standard deviation of 1 creating a kernel of 5x5.
+% res1 -> output using kernel_y (horizontal)
+% res2 -> output using kernel_x (vertical)
+% res3 -> output using magnitude of vertical and horizontal kernels
 
 function [res1,res2,res3] = sobel(image,flag)
 
