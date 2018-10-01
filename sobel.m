@@ -10,7 +10,7 @@
 function [res1,res2,res3] = sobel(image,flag)
 
 im = imread(image);
-im = im2double(rgb2gray(im));
+im = double(rgb2gray(im));
 
 if flag == 1
     im = imgaussfilt(im,1);
@@ -38,6 +38,10 @@ for i = 2:x-1
         
     end
 end
+
+res1 = cast(res1, 'uint8');
+res2 = cast(res1, 'uint8');
+res3 = cast(res1, 'uint8');
 
 res1(res1 > 255) = 255;
 res1(res1 < 0) = 0;
