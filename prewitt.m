@@ -36,6 +36,10 @@ for i = 2:x-1
     end
 end
 
+res1 = cast(res1, 'uint8');
+res2 = cast(res1, 'uint8');
+res3 = cast(res1, 'uint8');
+
 res1(res1 > 255) = 255;
 res1(res1 < 0) = 0;
 
