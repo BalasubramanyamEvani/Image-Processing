@@ -7,7 +7,7 @@
 function [res1,res2,res3] = prewitt(image,flag)
 
 im = imread(image);
-im = im2double(rgb2gray(im));
+im = double(rgb2gray(im));
 
 if flag == 1
     im = imgaussfilt(im,1);
