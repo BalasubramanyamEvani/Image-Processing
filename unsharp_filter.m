@@ -2,9 +2,7 @@
 % DIP Course Manipal University Jaipur
 
 %% function unsharp_filter takes in two inputs image and weight
-% outputs gaussian blur, high frequenct components, enhanced image
-% if weight field is specified it works as highboost fitler, if not then
-% default value is taken as 1
+% outputs gaussian blur, high frequency components, enhanced image
 
 function [low,high_mask,res] = unsharp_filter(image,weight)
 
