@@ -13,8 +13,8 @@ if flag == 1
     im = imgaussfilt(im,1);
 end
 
-kernel_y = [-1 -1 -1; 0 0 0;1 1 1];
-kernel_x = [-1 0 1;-1 0 1;-1 0 1];
+kernel_y = [1 1 1; 0 0 0;-1 -1 -1];
+kernel_x = [1 0 -1;1 0 -1;1 0 -1];
 x = size(im,1);
 y = size(im,2);
 
@@ -37,8 +37,8 @@ for i = 2:x-1
 end
 
 res1 = cast(res1, 'uint8');
-res2 = cast(res1, 'uint8');
-res3 = cast(res1, 'uint8');
+res2 = cast(res2, 'uint8');
+res3 = cast(res3, 'uint8');
 
 res1(res1 > 255) = 255;
 res1(res1 < 0) = 0;
